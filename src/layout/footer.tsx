@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight,
   ArrowRightCircle,
   CalendarCheck,
-  ChevronUp,
 } from "lucide-react";
 
 export default function Footer() {
