@@ -33,7 +33,7 @@ export default function Footer() {
       <FooterLinks />
       <div className="py-4 bg-primary text-secondary flex flex-col items-center justify-center">
         <ul className="flex gap-2">
-          {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+          {SOCIAL_LINKS.map(({ href, Icon }) => (
             <li key={href}>
               <a href={href} target="_blank" rel="noreferrer">
                 <Button
