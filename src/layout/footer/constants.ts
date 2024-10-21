@@ -1,5 +1,5 @@
 import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
-import { LucideIcon } from "lucide-react";
+import { Link2 } from "lucide-react";
 
 interface FooterLinks {
   title: string;
@@ -10,55 +10,46 @@ interface FooterLinks {
   }[];
 }
 
-export const FOOTER_LINKS : FooterLinks[] = [
+export const FOOTER_LINKS: FooterLinks[] = [
   {
     title: "Eventos",
     children: [
       {
         label: "Fullday Gobierno de TIC",
-        href: "#",
+        href: "#fullday",
       },
       {
         label: "Rifas",
-        href: "#",
+        href: "#rifas",
       },
       {
         label: "Bingo",
-        href: "#",
+        href: "#bingo",
       },
       {
         label: "Torneos",
-        href: "#",
+        href: "#torneos",
       },
     ],
   },
   {
     title: "Ayuda",
     children: [
-        {
-            label: "Preguntas frecuentes",
-            href: "#",
-            Icon: QuestionMarkCircledIcon
-        }
-    ]
+      {
+        label: "Preguntas frecuentes",
+        href: "#faqs",
+        Icon: QuestionMarkCircledIcon,
+      },
+    ],
   },
   {
-    title: "Ayuda",
+    title: "Otros enlaces",
     children: [
-        {
-            label: "Preguntas frecuentes",
-            href: "#",
-            Icon: QuestionMarkCircledIcon
-        }
-    ]
-  },  {
-    title: "Ayuda",
-    children: [
-        {
-            label: "Preguntas frecuentes",
-            href: "#",
-            Icon: QuestionMarkCircledIcon
-        }
-    ]
+      {
+        label: "Otros",
+        href: "#others",
+        Icon: Link2,
+      },
+    ],
   },
 ];

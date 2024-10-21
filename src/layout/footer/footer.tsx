@@ -14,7 +14,7 @@ export default function Footer() {
   const SOCIAL_LINKS: SocialLinks[] = [
     {
       label: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/profile.php?id=61560010705493",
       Icon: FacebookIcon,
     },
     {
@@ -24,23 +24,24 @@ export default function Footer() {
     },
     {
       label: "Instagram",
-      href: "#",
+      href: "https://www.instagram.com/systemxxv.unt/",
       Icon: InstagramIcon,
     },
   ];
   return (
-    <footer className="flex flex-col">
-      <div className="bg-muted-foreground">background</div>
+    <footer className="flex flex-col border border-t-secondary">
+      {/* <div className="bg-muted-foreground">background</div> */}
       <FooterLinks />
       <div className="py-4 bg-primary text-secondary flex flex-col items-center justify-center">
         <ul className="flex gap-2">
           {SOCIAL_LINKS.map(({ label, href, Icon }) => (
             <li key={href}>
-              <a href={href}>
+              <a href={href} target="_blank" rel="noreferrer">
                 <Button
-                  className="p-0 text-secondary rounded-full border border-secondary flex items-center justify-center w-12 h-12 from-muted-foreground"
+                  className="p-0 text-secondary rounded-full border border-secondary flex items-center justify-center w-12 h-12 after:bg-secondary hover:text-primary"
+                  animation={"fillUp"}
                 >
-                  {Icon && <Icon className="w-6 h-6" />}
+                  {Icon && <Icon className="w-6 h-6 stroke-[2px]" />}
                 </Button>
               </a>
             </li>
