@@ -1,4 +1,4 @@
-import Footer from "@/layout/footer";
+import Footer from "@/layout/footer/footer";
 import Nav from "@/layout/nav";
 import Banner from "@/sections/banner";
 import Horarios from "@/sections/horarios";
