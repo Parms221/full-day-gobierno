@@ -30,7 +30,6 @@ export default function Footer() {
   ];
   return (
     <footer className="flex flex-col border border-t-secondary">
-      {/* <div className="bg-muted-foreground">background</div> */}
       <FooterLinks />
       <div className="py-4 bg-primary text-secondary flex flex-col items-center justify-center">
         <ul className="flex gap-2">
