@@ -5,40 +5,48 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
+import { useState } from "react";
 
 const preguntasRespuestas = [
   {
     id: "item-1",
-    pregunta: "¿Es accesible?",
-    respuesta: "Sí. Se adhiere al patrón de diseño WAI-ARIA.",
+    pregunta: "¿Que es el full day de gestión de TIC?",
+    respuesta: "El VII Full Day de Gestión de TI es un evento organizado por la promoción XXV de la Escuela de Ingeniería de Sistemas de la Universidad Nacional de Trujillo. Este evento tiene como objetivo reunir a profesionales, estudiantes y expertos en tecnologías de la información para compartir conocimientos, experiencias y las últimas tendencias en el campo de la gestión de TI.",
   },
   {
     id: "item-2",
-    pregunta: "¿Está estilizado?",
+    pregunta: "¿Quiénes pueden asistir al evento?",
     respuesta:
-      "Sí. Viene con estilos predeterminados que coinciden con la estética de los otros componentes.",
+      "El evento está dirigido a profesionales, estudiantes y público en general interesado en las tecnologías de la información y la gestión de TI.",
   },
   {
     id: "item-3",
-    pregunta: "¿Está animado?",
+    pregunta: "¿Hay algún costo de inscripción?",
     respuesta:
-      "Sí. Está animado por defecto, pero puedes desactivarlo si lo prefieres.",
+      "No, el evento es completamente gratuito. Si deseas obtener un certificado de participación, puedes adquirirlo por un costo simbólico.",
   },
+  {
+    id: "item-4",
+    pregunta: "¿El evento será presencial o virtual?",
+    respuesta:
+      "El evento se realizará de forma presencial y virtual. Las ponencias se transmitirán en vivo a través de nuestra plataforma online, para que puedas participar desde cualquier lugar del mundo. Además, contaremos con un espacio físico en la Universidad Nacional de Trujillo para aquellos que deseen asistir de forma presencial.",
+  },
+  
 ];
 
 export default function PreguntasFrecuentes() {
   return (
     <div className="w-full bg-[#E5E5E5]">
       <div className="container mx-auto p-4">
-        <div className="flex items-center justify-center ">
-          <h1 className="text-2xl font-bold text-[#14213D] font-inter mr-2">
+        <div className="flex items-center justify-center mb-2 ">
+          <h1 className="text-2xl font-bold text-[#14213D]  ">
             Preguntas Frecuentes
           </h1>
           <Image
-            src="/src/images/preguntas.png"
+            src="/images/preguntas.png"
             alt="Icono de Preguntas Frecuentes"
-            width={20}
-            height={20}
+            width={50}
+            height={50}
           />
         </div>
         <Accordion type="single" collapsible className="w-full">
