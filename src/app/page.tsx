@@ -1,4 +1,3 @@
-import Footer from "@/layout/footer";
 import Banner from "@/sections/banner";
 import Horarios from "@/sections/horarios";
 import Ponentes from "@/sections/ponentes";
@@ -15,7 +14,6 @@ export default function Home() {
       <Horarios />
       <Preguntas />
       <Ubicacion />
-      <Footer />
     </main>
   );
 }
