@@ -62,10 +62,16 @@ const config: Config = {
 			"shine" : {
 				from: { backgroundPosition: "200% 0" },
 				to: { backgroundPosition: "-200% 0" }
+			},
+			"scale-background": {
+				"0%": { backgroundSize: "cover" },
+				"100%": { backgroundSize: "150%" }
 			}
+
 		},
 		animation: {
-			"shine" : "shine 8s ease-in-out infinite"
+			"shine" : "shine 8s ease-in-out infinite",
+			"scale-background": "scale-background 1s ease-in-out infinite"
 		}
   	}
   },
