@@ -3,10 +3,11 @@ import RouterNav from "./nav/routes-md-component";
 import { Button } from "@/components/ui/button";
 import { CalendarCheck } from "lucide-react";
 import RouterSmNav from "./nav/routes-sm-component";
+import ColorNav from "./nav/color-nav.context";
 
 export default function Nav() {
     return (
-        <div className="sticky top-0 z-40 w-full backdrop-blur-md bg-transparent">
+        <ColorNav>
             <nav className="relative container mx-auto py-3 flex justify-between px-3 md:px-0">
                 <Logo />
                 <div className="hidden sm:block">
@@ -26,6 +27,6 @@ export default function Nav() {
                     </Button>
                 </div>
             </nav>
-        </div>
+        </ColorNav>
     );
 }

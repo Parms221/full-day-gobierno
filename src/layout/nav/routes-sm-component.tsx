@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
 export default function RouterSmNav() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const path = usePathname();
     return (
         <div>

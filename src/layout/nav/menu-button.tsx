@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ColorNavStates, useColorNav } from "./color-nav.context";
 
 const width = 16;
 const height = 16;
@@ -38,9 +39,11 @@ const bottom = {
 };
 
 export default function MenuButton({ open }: { open: boolean }) {
+
+    const { type }= useColorNav()
     const variant = open ? "opened" : "closed";
     const lineProps = {
-        stroke: "#000",
+        stroke: type == ColorNavStates.WHITE ? "#000" : "#fff",
         strokeWidth: 1,
         vectorEffect: "non-scaling-stroke",
         initial: "closed",
