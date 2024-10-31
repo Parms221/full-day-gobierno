@@ -59,7 +59,7 @@ export default function Banner() {
                                     <Calendar className="w-12 h-12" />
                                     <div className="flex gap-2 items-end">
                                         <h2 className="text-6xl font-extrabold">
-                                            14
+                                            07
                                         </h2>
                                         <div className="items-end font-bold text-xl">
                                             <p>DIC</p>

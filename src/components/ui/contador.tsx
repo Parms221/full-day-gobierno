@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Contador = () => {
   // Target date for the event
-  const targetDate = new Date('2024-12-14').getTime();
+  const targetDate = new Date('2024-12-07').getTime();
   
   // State to store countdown values
   const [timeLeft, setTimeLeft] = useState({
