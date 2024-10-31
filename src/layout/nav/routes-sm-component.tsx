@@ -8,16 +8,18 @@ import { ROUTES } from "./router.contants";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { ColorNavStates, useColorNav } from "./color-nav.context";
 
 export default function RouterSmNav() {
     const [open, setOpen] = useState(false);
     const path = usePathname();
+    const {type} = useColorNav();
     return (
         <div>
             <Button
                 variant={"ghost"}
                 size={"icon"}
-                className=""
+                className={cn(type != ColorNavStates.WHITE ? "hover:bg-white/10" : "")}
                 onClick={() => {
                     setOpen(!open);
                 }}
