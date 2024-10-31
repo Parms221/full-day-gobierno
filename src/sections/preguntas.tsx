@@ -4,7 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Image from "next/image";
+import { MessageCircleQuestionIcon } from "lucide-react";
 
 const preguntasRespuestas = [
   {
@@ -37,18 +37,13 @@ export default function PreguntasFrecuentes() {
   return (
     <div className="w-full bg-[#E5E5E5] py-8 animated-background">
       <div className="container mx-auto p-4">
-        <div className="flex items-center justify-center mb-6">
+        <div className="flex items-center justify-center mb-6 gap-3">
           <h1 className="text-3xl font-bold text-primary relative">
             Preguntas Frecuentes
             <span className="absolute inset-0 bg-secondary transform scale-x-0 origin-bottom-right transition-transform duration-300 ease-out hover:scale-x-100 hover:origin-bottom-left"></span>
           </h1>
-          <Image
-            src="/images/preguntas.png"
-            alt="Icono de Preguntas Frecuentes"
-            width={50}
-            height={50}
-            className="ml-4"
-          />
+
+          <MessageCircleQuestionIcon size={30} className="text-primary" />
         </div>
         <Accordion type="single" collapsible className="w-3/4 mx-auto">
           {preguntasRespuestas.map(({ id, pregunta, respuesta }) => (
