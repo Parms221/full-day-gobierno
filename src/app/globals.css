@@ -67,3 +67,23 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+.animated-background {
+  background: linear-gradient(270deg, #e5e5e5, #ffd590, #e5e5e5);
+  background-size: 600% 600%;
+  animation: BackgroundAnimation 10s ease infinite;
+}
+
+@keyframes BackgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

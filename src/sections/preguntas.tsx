@@ -29,37 +29,39 @@ const preguntasRespuestas = [
     id: "item-4",
     pregunta: "¿El evento será presencial o virtual?",
     respuesta:
-      "El evento se realizará de forma presencial y virtual. Las ponencias se transmitirán en vivo a través de nuestra plataforma online, para que puedas participar desde cualquier lugar del mundo. Además, contaremos con un espacio físico en la Universidad Nacional de Trujillo para aquellos que deseen asistir de forma presencial.",
+      "El evento se realizará de forma presencial en el auditorio de la Facultad de Ingeniería de Sistemas e Informática de la Universidad Nacional de Trujillo.",
   },
   
 ];
 
 export default function PreguntasFrecuentes() {
   return (
-    <div className="w-full bg-[#E5E5E5]">
+    <div className="w-full bg-[#E5E5E5] py-8 animated-background">
       <div className="container mx-auto p-4">
-        <div className="flex items-center justify-center mb-2 ">
-          <h1 className="text-2xl font-bold text-[#14213D]  ">
+        <div className="flex items-center justify-center mb-6">
+          <h1 className="text-3xl font-bold text-[#14213D] relative">
             Preguntas Frecuentes
+            <span className="absolute inset-0 bg-[#FCA311] transform scale-x-0 origin-bottom-right transition-transform duration-300 ease-out hover:scale-x-100 hover:origin-bottom-left"></span>
           </h1>
           <Image
             src="/images/preguntas.png"
             alt="Icono de Preguntas Frecuentes"
             width={50}
             height={50}
+            className="ml-4"
           />
         </div>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-3/4 mx-auto">
           {preguntasRespuestas.map(({ id, pregunta, respuesta }) => (
             <AccordionItem
               key={id}
               value={id}
-              className="bg-white mb-2 pl-5 pr-5 pb-4"
+              className="bg-white mb-4 shadow-lg rounded-lg overflow-hidden"
             >
-              <AccordionTrigger className="text-[#FCA311] font-bold text-base">
+              <AccordionTrigger className="text-[#FCA311] font-bold text-lg p-4 hover:bg-[#FCA311] hover:text-white transition-colors duration-300">
                 {pregunta}
               </AccordionTrigger>
-              <AccordionContent className="text-[#14213D] text-sm animate-slide-down">
+              <AccordionContent className="text-[#14213D] text-base p-4 border-t border-gray-200">
                 {respuesta}
               </AccordionContent>
             </AccordionItem>
