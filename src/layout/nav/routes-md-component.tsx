@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { ROUTES } from "./router.contants";
+
+
 
 export default function RouterNav() {
     const [position, setPosition] = useState({
@@ -47,19 +50,20 @@ export default function RouterNav() {
 
             className="relative flex w-fit"
         >
-            <Tab href="/" active={path == "/"} setCursor={setCursor} setPosition={setPosition}>
-                Inicio
-            </Tab>
 
-            <Tab href="/ponentes" setCursor={setCursor} active={path.startsWith("/ponentes")} setPosition={setPosition}>
-                Ponentes
-            </Tab>
-            <Tab href="/nosotros"setCursor={setCursor} active={path == "/nosotros"} setPosition={setPosition}>
-                Nosotros
-            </Tab>
-            <Tab href="/eventos"setCursor={setCursor} active={path.startsWith("/eventos")} setPosition={setPosition}>
-                Eventos
-            </Tab>
+            {
+                ROUTES.map((route) => (
+                    <Tab
+                        key={route.href}
+                        active={route.active(path)}
+                        setPosition={setPosition}
+                        setCursor={setCursor}
+                        href={route.href}
+                    >
+                        {route.name}
+                    </Tab>
+                ))
+            }
 
             {process.env.NODE_ENV !== "production" && (
                 <Tab
