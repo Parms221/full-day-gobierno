@@ -49,7 +49,7 @@ export default function Ubicacion() {
         animate={
           isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }
         }
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         {/* Sección izquierda */}
         <motion.div
@@ -66,7 +66,7 @@ export default function Ubicacion() {
             ciudad, ofreciendo fácil acceso a recursos culturales, oportunidades
             profesionales y una vibrante vida estudiantil.
           </p>
-          <div className="flex items-center mt-4 bg-[#14213D] text-[#FCA311] rounded-lg p-6">
+          <div className="flex items-center mt-4 bg-primary text-secondary rounded-lg p-6">
             <MdLocationOn className="mr-2" />
             <div className="flex flex-col">
               <span className="font-semibold">Dirección:</span>
