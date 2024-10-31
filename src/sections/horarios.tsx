@@ -6,6 +6,7 @@ import styled from '@emotion/styled';
 
 // Definición del tipo para asegurar consistencia en los datos de cada exposición
 interface Exposition {
+    id: number;
     name: string;
     date: string;
     time: string;
@@ -15,6 +16,7 @@ interface Exposition {
 
 const initialExpositions: Exposition[] = [
     {
+        id: 1,
         name: 'Veronica Lopez',
         date: 'Diciembre 16, 2024',
         time: '08:00 am - 08:30 am',
@@ -22,6 +24,7 @@ const initialExpositions: Exposition[] = [
         description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
     },
     {
+        id: 2,
         name: 'Dr Nombreeee',
         date: 'Diciembre 16, 2024',
         time: '08:30 am - 09:30 am',
@@ -29,22 +32,41 @@ const initialExpositions: Exposition[] = [
         description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
     },
     {
+        id: 3,
         name: 'Dr Nombreeee',
         date: 'Diciembre 16, 2024',
         time: '08:30 am - 09:30 am',
-        topic: 'TEMA 1',
+        topic: 'TEMA 2',
         description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
     },
     {
+        id: 4,
         name: 'Dr Nombreeee',
         date: 'Diciembre 16, 2024',
         time: '08:30 am - 09:30 am',
-        topic: 'TEMA 1',
+        topic: 'TEMA 3',
+        description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
+    },
+    {
+        id: 5,
+        name: 'Dr Nombreeee',
+        date: 'Diciembre 16, 2024',
+        time: '08:30 am - 09:30 am',
+        topic: 'TEMA 4',
+        description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
+    },
+    {
+        id: 6,
+        name: 'Dr Nombreeee',
+        date: 'Diciembre 16, 2024',
+        time: '08:30 am - 09:30 am',
+        topic: 'TEMA 5',
         description: 'La presentación abordará las últimas tendencias, retos y mejores prácticas en seguridad de la información y ciberseguridad.',
     },
 
 ];
 
+ 
 // Componente principal
 export default function Horarios() {
     const [expositions, setExpositions] = useState<Exposition[]>(initialExpositions);
@@ -54,7 +76,7 @@ export default function Horarios() {
             <Title>Horario de Exposiciones</Title>
             <Reorder.Group axis="y" values={expositions} onReorder={(newOrder) => setExpositions(newOrder as Exposition[])}>
                 {expositions.map((exposition) => (
-                    <Reorder.Item key={exposition.name} value={exposition}>
+                    <Reorder.Item key={exposition.id} value={exposition}>
                         <Card>
                             <LeftSection>
                                 <Icon src="/images/6034988.png" alt="perfil" />
