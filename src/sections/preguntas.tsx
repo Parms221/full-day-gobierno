@@ -5,7 +5,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import { useState } from "react";
 
 const preguntasRespuestas = [
   {
@@ -39,9 +38,9 @@ export default function PreguntasFrecuentes() {
     <div className="w-full bg-[#E5E5E5] py-8 animated-background">
       <div className="container mx-auto p-4">
         <div className="flex items-center justify-center mb-6">
-          <h1 className="text-3xl font-bold text-[#14213D] relative">
+          <h1 className="text-3xl font-bold text-primary relative">
             Preguntas Frecuentes
-            <span className="absolute inset-0 bg-[#FCA311] transform scale-x-0 origin-bottom-right transition-transform duration-300 ease-out hover:scale-x-100 hover:origin-bottom-left"></span>
+            <span className="absolute inset-0 bg-secondary transform scale-x-0 origin-bottom-right transition-transform duration-300 ease-out hover:scale-x-100 hover:origin-bottom-left"></span>
           </h1>
           <Image
             src="/images/preguntas.png"
@@ -58,10 +57,10 @@ export default function PreguntasFrecuentes() {
               value={id}
               className="bg-white mb-4 shadow-lg rounded-lg overflow-hidden"
             >
-              <AccordionTrigger className="text-[#FCA311] font-bold text-lg p-4 hover:bg-[#FCA311] hover:text-white transition-colors duration-300">
+              <AccordionTrigger className="text-secondary font-bold text-lg p-4 hover:bg-secondary hover:text-white transition-colors duration-300">
                 {pregunta}
               </AccordionTrigger>
-              <AccordionContent className="text-[#14213D] text-base p-4 border-t border-gray-200">
+              <AccordionContent className="text-primary text-base p-4 border-t border-gray-200">
                 {respuesta}
               </AccordionContent>
             </AccordionItem>
