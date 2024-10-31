@@ -1,5 +1,5 @@
 import colors from '@/constants/colors'
-import { ReactNode, useMemo } from 'react'
+import { ReactNode } from 'react'
 
 const fontWeight = {
     bold: 700,
@@ -39,14 +39,12 @@ interface TextProps {
     textStyle: TextStyle
     colorStyle: ColorStyle
     children: ReactNode
+    className?: string
 }
 
-export function Text({ textStyle, colorStyle, children }: TextProps) {
-    const textStyles = useMemo(() => getTextStyles, [])
-    const colorStyles = useMemo(() => getColorStyles, [])
+export function Text({ className, textStyle, colorStyle, children }: TextProps) {
+    const { fontSize, fontWeight } = getTextStyles[textStyle]
+    const color = getColorStyles[colorStyle]
 
-    const { fontSize, fontWeight } = textStyles[textStyle]
-    const color = colorStyles[colorStyle]
-
-    return <span style={{ fontSize, fontWeight, color, fontFamily: 'SFPro' }}>{children}</span>
+    return <span className={className} style={{ fontSize, fontWeight, color, fontFamily: 'SFPro' }}>{children}</span>
 }
