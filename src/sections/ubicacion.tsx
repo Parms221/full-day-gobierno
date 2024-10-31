@@ -32,7 +32,7 @@ export default function Ubicacion() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="py-3 mt-8 flex flex-col items-center">
       <motion.h1
         className="text-4xl font-bold mb-8"
         initial={{ opacity: 0, y: -20 }}
