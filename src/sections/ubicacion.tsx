@@ -39,7 +39,7 @@ export default function Ubicacion() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Ubicacion
+        Ubicación
       </motion.h1>
 
       <motion.div
